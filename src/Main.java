@@ -13,10 +13,10 @@ public class Main {
         printOS(2014, 0);
         printOS(2020, 0);
         System.out.println(" 3 task");
-        delivery(5);
-        delivery(25);
-        delivery(85);
-        delivery(105);
+        System.out.println("Доставка " + delivery(5) + " дня");
+        System.out.println("Доставка " + delivery(25) + " дня");
+        System.out.println("Доставка " + delivery(85) + " дня");
+        System.out.println(delivery(105) );
     }
 
     public static void printYear(int year) {
@@ -38,16 +38,16 @@ public class Main {
         }
     }
 
-    public static void delivery(int distance) {
-        if (distance <= 19) {
-            System.out.println("Доставка займет 1 день");
-        } else if (distance > 19 && distance <= 59) {
-            System.out.println("Доставка займет 2 деня");
-        } else if (distance > 60 && distance < 100) {
-            System.out.println("Доставка займет 3 деня");
-        } else {
-            System.out.println("Доставки нет");
-        }
-
+    public static int delivery(int distance) {
+        int count = 0;
+        if (distance <= 19)
+            count = 1;
+        if (distance > 20 && distance <= 59)
+            count = 2;
+        if (distance > 60 && distance <= 100)
+            count = 3;
+        else
+            return count;
+        return count;
     }
 }
