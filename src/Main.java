@@ -46,8 +46,6 @@ public class Main {
             count = 2;
         if (distance > 60 && distance <= 100)
             count = 3;
-        else
-            return count;
         return count;
     }
 }
